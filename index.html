@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buxgalteriya Xizmatlari - Professional moliyaviy yechimlar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <i class="fa-solid fa-calculator"></i> <span>BuxPro</span>
+            </div>
+            <nav>
+                <a href="#home">Bosh sahifa</a>
+                <a href="#services">Xizmatlar</a>
+                <a href="#calculator">Kalkulyator</a>
+                <a href="#contact">Bog'lanish</a>
+            </nav>
+            <a href="#contact" class="btn-primary">Maslahat olish</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Biznesingiz uchun ishonchli buxgalteriya xizmatlari</h1>
+            <p>Soliq hisobotlari, kadrlar auditi va moliyaviy tahlilni professional darajada yuritib beramiz. Vaqtingizni va pulingizni tejang!</p>
+            <div class="hero-btns">
+                <a href="#calculator" class="btn-primary">Xarajatni hisoblash</a>
+                <a href="#services" class="btn-outline">Batafsil</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container section">
+        <h2 class="section-title">Bizning xizmatlarimiz</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <h3>Soliq Hisobotlari</h3>
+                <p>Barcha turdagi soliq hisobotlarini o'z vaqtida va xatosiz tayyorlab topshirish.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-users-gear"></i>
+                <h3>Kadrlar Hisobi</h3>
+                <p>Kadrlar bo'limini yuritish, ish haqi hisoblash va mehnat shartnomalarini rasmiylashtirish.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-chart-pie"></i>
+                <h3>Moliyaviy Audit</h3>
+                <p>Korxonangizning moliyaviy holatini chuqur tahlil qilish va xarajatlarni optimallashtirish.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="section bg-light">
+        <div class="container calc-container">
+            <h2 class="section-title">Xizmat narxini hisoblash</h2>
+            <p class="calc-desc">Korxonangiz turiga qarab taxminiy xizmat narxini aniqlang</p>
+            
+            <div class="calc-box">
+                <div class="form-group">
+                    <label for="activity">Faoliyat turi:</label>
+                    <select id="activity">
+                        <option value="service">Xizmat ko'rsatish (Olingan daromadga qarab)</option>
+                        <option value="trade">Savdo / Chakana savdo</option>
+                        <option value="production">Ishlab chiqarish</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="employees">Xodimlar soni:</label>
+                    <input type="number" id="employees" value="5" min="0" max="500">
+                </div>
+
+                <div class="form-group">
+                    <label for="documents">Oylik hujjatlar aylanmasi (ta):</label>
+                    <input type="number" id="documents" value="50" min="0" max="5000">
+                </div>
+
+                <button id="calc-btn" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Hisoblash</button>
+
+                <div class="result-box" id="result-box">
+                    Taxminiy oylik xizmat haqi: <span id="total-price">0</span> so'm
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container section">
+        <h2 class="section-title">Biz bilan bog'laning</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <p><i class="fa-solid fa-phone"></i> +998 (90) 123-45-67</p>
+                <p><i class="fa-solid fa-envelope"></i> info@buxpro.uz</p>
+                <p><i class="fa-solid fa-location-dot"></i> Toshkent sh., Chilonzor tumani</p>
+            </div>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Xabaringiz yuborildi! Tez orada bog\'lanamiz.');">
+                <input type="text" placeholder="Ismingiz" required>
+                <input type="tel" placeholder="Telefon raqamingiz" required>
+                <textarea placeholder="Xabaringiz yoki savolingiz" rows="4" required></textarea>
+                <button type="submit" class="btn-primary" style="border: none; cursor: pointer;">Yuborish</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 BuxPro. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
